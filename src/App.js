@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Routes, Route, Link } from "react-router-dom";
+import { Routes, Route, Link, NavLink } from "react-router-dom";
 import "bootstrap/dist/css/bootstrap.min.css";
 
 import AddReview from "./components/addReview";
@@ -29,11 +29,11 @@ function App() {
 
         <Navbar.Collapse id="basic-navbar-nav">
           <Nav className="mr-auto">
-            <Nav.Link>
+            <Nav.Link as={NavLink}>
               <Link to={"/movies"}>Movies</Link>
             </Nav.Link>
-            <Nav.Link>
-              {user ? <a>Logout User</a> : <Link to={"/login"}>Login</Link>}
+            <Nav.Link as={NavLink} to={user ? "" : "/login"}>
+              {user ? "Logout User" : "Login"}
             </Nav.Link>
           </Nav>
         </Navbar.Collapse>
