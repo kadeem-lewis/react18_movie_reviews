@@ -1,3 +1,5 @@
 - when using .map function, the rendered content should have a key. MovieList maps are missing keys
 - Nav.Link from bootstrap renders an A tag and the login/logout route was trying to render an a tag inside of an a tag which is not allowed
 - the login/logout route also attempts to render a a tag without an href but this only results in a warning and not an error
+- "<Media>" is not available in latest version of react bootstrap
+- Method of passing state with link is different
